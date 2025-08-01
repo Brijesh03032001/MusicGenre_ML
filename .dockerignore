@@ -1,0 +1,13 @@
+music_env_310/
+.git/
+.gitignore
+*.pyc
+__pycache__/
+.pytest_cache/
+.DS_Store
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+env/
