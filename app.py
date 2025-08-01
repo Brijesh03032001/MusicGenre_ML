@@ -14,7 +14,6 @@ if not os.path.exists(MODEL_PATH):
     gdown.download(url, MODEL_PATH, quiet=False)
 
 import streamlit as st
-import os
 import librosa
 import numpy as np
 import tensorflow as tf
