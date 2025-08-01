@@ -1,3 +1,18 @@
+import os
+# --- Auto-download model from Google Drive if missing ---
+MODEL_PATH = "Trained_model.keras"
+GOOGLE_DRIVE_ID = "1EvDGdPcBcNOW3YquzukxlIpKpEJL9y94"
+if not os.path.exists(MODEL_PATH):
+    try:
+        import gdown
+    except ImportError:
+        import subprocess
+        subprocess.check_call(["pip", "install", "gdown"])
+        import gdown
+    url = f"https://drive.google.com/uc?id={GOOGLE_DRIVE_ID}"
+    print("Downloading model from Google Drive...")
+    gdown.download(url, MODEL_PATH, quiet=False)
+
 import streamlit as st
 import os
 import librosa
